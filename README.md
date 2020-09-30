@@ -1,5 +1,5 @@
 # Digitale Coronaliste
-Die Aufrechterhaltung des öffentlichen Lebens erfordert in Zeiten einer globalen Pandemie weitreichende Maßnahmen zur Eindämmung des Virus. Papierhafte Listen zur Erfassung von Kontaktdaten machen die Aufrechterhaltung des Betriebs von Cafés, Restaurants, Geschäften oder anderen öffentlichen Einrichtungen weiterhin (unter Einschränkungen) möglich.
+Die Aufrechterhaltung des öffentlichen Lebens erfordert in Zeiten einer globalen Pandemie weitreichende Maßnahmen zur Eindämmung des Virus. Papierhafte Listen zur Erfassung von Kontaktdaten machen die Aufrechterhaltung des Betriebs von Cafés, Restaurants oder öffentlicher Kultureinrichtungen weiterhin (unter Einschränkungen) möglich.
 
 Um das Hinterlegen von Kontaktdaten zu vereinfachen, setzen Cafés, Restaurants und Geschäfte häufig auf digitale Lösungen zur Kontakterfassung. Aktuell schützen diese oft unzureichend vor Datenmissbrauch. Mit unserem System wollen wir eine frei verfügbare Software zur digitalen Kontakterfassung schaffen, die von Grund auf mit dem Ziel entworfen ist, die Kontaktdaten von Kund:innen zu schützen und damit über die Sicherheit von papierhafter Kontakterfassung hinausgeht (d.h. Café-Betreiber:innen erhalten zu keinem Zeitpunkt Zugriff auf die erfassten Daten).
 
@@ -16,7 +16,7 @@ Bestehende Online-Kontaktlisten
 - speichern Daten unverschlüsselt in zentralisierten Datenbanken,
 - sind herstellergebunden und nicht Open Source.
 
-Statt auf geschlossene Lösungen einzelner Hersteller zu setzen, möchten wir frei verfügbare Software schaffen, die lokalen IT-Dienstleistern die Bereitstellung eines sicheren Systems zur digitalen Erfassung von Kontaktdaten ermöglicht. Datenschutz und Datensicherheit stehen müssen dabei an erster Stelle stehen und im Sinne von Privacy-by-Design direkt von Anfang an bereits in der Konzeptionsphase der Software berücksichtigt werden. Insbesondere setzen wir dabei auf starke Verschlüsselungsverfahren, sodass weder der lokale IT-Dienstleister, noch das Café/Restaurant Zugriff auf die Daten bekommen. Lediglich die anfragende Gesundheitsbehörde erhält nach vorheriger „Freischaltung“ (Entschlüsselung) durch das Café/Restaurant Zugriff auf die hochsensiblen Kontaktdaten der Besucher:innen.
+Statt auf geschlossene Lösungen einzelner Hersteller zu setzen, möchten wir frei verfügbare Software schaffen, die lokalen IT-Dienstleistern die Bereitstellung eines sicheren Systems zur digitalen Erfassung von Kontaktdaten ermöglicht. Datenschutz und Datensicherheit müssen dabei an erster Stelle stehen und im Sinne von Privacy-by-Design direkt von Anfang an bereits in der Konzeptionsphase der Software berücksichtigt werden. Insbesondere setzen wir dabei auf starke Verschlüsselungsverfahren, sodass weder der lokale IT-Dienstleister, noch das Café/Restaurant Zugriff auf die Daten bekommen. Lediglich die anfragende Gesundheitsbehörde erhält nach vorheriger „Freischaltung“ (Entschlüsselung) durch das Café/Restaurant Zugriff auf die hochsensiblen Kontaktdaten der Besucher:innen.
 
 ## Die Lösung
 Wir brauchen eine **offene Lösung**, die
@@ -25,12 +25,14 @@ Wir brauchen eine **offene Lösung**, die
 - als Freie Software für Cafés und IT-Dienstleister zur Verfügung steht (Open Source).
 
 ### Systemaufbau (vereinfacht)
+Vereinfachter Aufbau der Kontaktdatenerfassung. Schritt 1 erfolgt bei jedem „Einchecken“ einer Besucher:in. Die Schritte 2 und 3 erfolgen im Falle einer möglichen Infektion selektiv für die Kontaktdaten eines bestimmten Zeitfensters nach vorheriger Anordnung der Herausgabe von Kontaktdaten.
+
 ![System overview](system-overview.png)
 
 ### QR-Code
 An Orten, an denen Nutzer:innen „einchecken“ können, stellen Betreiber dieser Örtlichkeiten QR-Codes auf. Ein QR-Code enthält einen Link mit der ID der Örtlichkeit und eine Signatur der öffentlichen Schlüssel von Gesundheitsbehörde und Örtlichkeit (Café/Restaurant/etc.).
 
-z.B. `https://corona.example.org/checkin?#sig=0453-1345-1342-5421`
+z.B. `https://corona.example.org/checkin?venue=4242#sig=0453-1345-1342-5421`
 
 1. Smartphone sendet die Signatur an den Server des lokalen IT-Dienstleisters und erhält zugehörige Daten (öffentliche Schlüssel von Gesundheitsbehörde und Café)
 2. Smarthphone prüft Übereinstimmung von Signatur aus QR-Code und empfangenen öffentlichen Schlüsseln.
