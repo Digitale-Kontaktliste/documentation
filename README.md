@@ -43,6 +43,6 @@ z.B. `https://corona.example.org/checkin?#sig=0453-1345-1342-5421`
 Im Falle eines Corona-Verdachts kann der Betreiber eine Ebene der Verschlüsselung der Daten entfernen. Die Gesundheitsbehörde hat anschließend Zugriff auf diese Daten.
 
 ### Doppelte Verschlüsselung („Onion encryption“)
-![Onion encryption](onion-encryption.png)
+<img src="onion-encryption.png" width="400">
 
 Zur Sicherstellung der Vertraulichkeit und zum Schutz vor Datenmissbrauch, werden die Kontaktdaten doppelt verschlüsselt: Die „innere“ Verschlüsselung stellt sicher, dass die Daten nur von der Gesundheitsbehörde im Klartext gelesen werden können und schützt die Daten vor unbefugtem Zugriff durch Dritte. Die „äußere“ Verschlüsselung erlaubt Betreiber:innen des Cafés/Restaurants/... die selektive Gewährung von Zugriffsrechten der Gesundheitsbehörde. Dazu können Betreiber:innen über eine (Web-)Anwendung selektiv die Daten für ein bestimmtes Zeitfenster entschlüsseln und damit der Gesundheitsbehörde den Zugriff auf diese Daten ermöglichen ohne selbst jemals Daten im Klartext verarbeiten zu müssen/können. Zu keinem Zeitpunkt haben Dritte Zugriff auf unverschlüsselte Daten, d.h. insbesondere auch nicht der Betreiber des Online-Dienstes.
