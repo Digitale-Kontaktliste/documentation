@@ -1,9 +1,7 @@
 # Digitale Coronaliste
 Die Aufrechterhaltung des öffentlichen Lebens erfordert in Zeiten einer globalen Pandemie weitreichende Maßnahmen zur Eindämmung des Virus. Papierhafte Listen zur Erfassung von Kontaktdaten machen die Aufrechterhaltung des Betriebs von Cafés, Restaurants, Geschäften oder anderen öffentlichen Einrichtungen weiterhin (unter Einschränkungen) möglich.
 
-Die Erfassung von Kontaktdaten auf Papier 
-Digitale „Coronalisten“
-TODO: Was ist das?
+Um das Hinterlegen von Kontaktdaten zu vereinfachen, setzen Cafés, Restaurants und Geschäfte häufig auf digitale Lösungen zur Kontakterfassung. Aktuell schützen diese oft unzureichend vor Datenmissbrauch. Mit unserem System wollen wir eine frei verfügbare Software zur digitalen Kontakterfassung schaffen, die von Grund auf mit dem Ziel entworfen ist, die Kontaktdaten von Kund:innen zu schützen und damit über die Sicherheit von papierhafter Kontakterfassung hinausgeht (d.h. Café-Betreiber:innen erhalten zu keinem Zeitpunkt Zugriff auf die erfassten Daten).
 
 ## Das Problem
 Analoge Corona-Kontaktlisten in Cafés sind
