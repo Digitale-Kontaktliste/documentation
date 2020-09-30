@@ -35,7 +35,7 @@ An Orten, an denen Nutzer:innen „einchecken“ können, stellen Betreiber dies
 z.B. `https://corona.example.org/checkin?venue=4242#sig=0453-1345-1342-5421`
 
 1. Smartphone sendet die Signatur an den Server des lokalen IT-Dienstleisters und erhält zugehörige Daten (öffentliche Schlüssel von Gesundheitsbehörde und Café)
-2. Smarthphone prüft Übereinstimmung von Signatur aus QR-Code und empfangenen öffentlichen Schlüsseln.
+2. Smartphone prüft Übereinstimmung von Signatur aus QR-Code und empfangenen öffentlichen Schlüsseln.
 3. Smartphone verschlüsselt Kontaktdaten mit dem öffentlichen Schlüssel der Gesundheitsbehörde.
 4. Smartphone verschlüsselt die bereits verschlüsselten Daten erneut - diesmal mit dem Schlüssel des Cafés.
 5. Doppelt verschlüsselte Kontaktdaten werden an den Server gesendet.
